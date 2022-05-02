@@ -141,13 +141,13 @@ small,
 }
 .hero .fa-bars {
   position: fixed;
-  font-size: 4em;
-  margin-left: 5rem;
-  margin-top: 3rem;
+  font-size: 2rem;
+  margin-left: 3rem;
+  margin-top: 2rem;
   color: var(--primary-color-500);
   animation: menuBlow var(--menu-animation-time) infinite ease-out;
-  top: 0.1em;
-  left: 0.1em;
+  top: 0rem;
+  left: 0rem;
 }
 @keyframes menuBlow {
   0% {
@@ -179,27 +179,29 @@ small,
   width: 50%;
 }
 .hero .hero-content-holder h2 {
-  font-size: 2em;
+  font-size: 2rem;
   font-family: "Cedarville Cursive", cursive;
   text-transform: capitalize;
   color: var(--primary-color-500);
   margin-bottom: 1rem;
+  text-align: center;
 }
 .hero .hero-content-holder h1 {
-  font-size: 4em;
+  font-size: 4rem;
   font-weight: bolder;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.1rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
 .hero .hero-content-holder .btn {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   width: 16rem;
   text-transform: uppercase;
   font-weight: lighter;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.3rem;
   color: white;
-  padding: 0.5em 2em;
+  padding: 0.5rem 2rem;
   background: var(--primary-color-900);
   margin: 0 auto;
   outline: 0.125rem solid var(--primary-color-900);
