@@ -27,7 +27,7 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 3rem 0 1.38rem;
+  // margin: 3rem 0 1.38rem;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   line-height: 1.3;
@@ -85,7 +85,7 @@ small,
   height: 100vh;
   background: var(--nav-bar-background);
 
-  z-index: 2;
+  z-index: 1000;
   transition: all var(--nav-open-close-time) ease-in-out;
   .menu-holder {
     position: absolute;
@@ -133,6 +133,7 @@ small,
 
   @media screen and (max-width: 768px) {
     width: 100%;
+    left: -200%;
   }
 }
 
@@ -141,6 +142,9 @@ small,
   height: 100vh;
   position: relative;
   background: url("./images/main-bcg.jpeg") center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .fa-bars {
     position: fixed;
@@ -149,6 +153,8 @@ small,
     margin-top: 3rem;
     color: var(--primary-color-500);
     animation: menuBlow var(--menu-animation-time) infinite ease-out;
+    top: 0.1em;
+    left: 0.1em;
 
     @keyframes menuBlow {
       0% {
@@ -174,6 +180,42 @@ small,
     background: rgba(0, 0, 0, 0.6);
     top: 0;
     left: 0;
+  }
+
+  .hero-content-holder {
+    color: white;
+    z-index: 9;
+    display: block;
+    text-align: center;
+    width: 50%;
+
+    h2 {
+      font-size: 2em;
+      font-family: "Cedarville Cursive", cursive;
+      text-transform: capitalize;
+      color: var(--primary-color-500);
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 4em;
+      font-weight: bolder;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      font-size: 1.5em;
+      width: 16rem;
+      text-transform: uppercase;
+      font-weight: lighter;
+      letter-spacing: 0.3em;
+      color: white;
+      padding: 0.5em 2em;
+      background: var(--primary-color-900);
+      margin: 0 auto;
+      outline: 0.125rem solid var(--primary-color-900);
+      outline-offset: 0.25rem;
+    }
   }
 }
 
