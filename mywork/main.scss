@@ -133,7 +133,7 @@ small,
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    left: -200%;
+    left: -100%;
   }
 }
 
@@ -223,6 +223,7 @@ small,
 
 .hero-bottom {
   height: 1em;
+  width: 100vw;
   background: rgb(233, 185, 73);
   background: radial-gradient(
     circle,

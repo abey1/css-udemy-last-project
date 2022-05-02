@@ -3,5 +3,5 @@ document.querySelector(".fa-bars").addEventListener("click", () => {
 });
 
 document.querySelector(".fa-xmark").addEventListener("click", () => {
-  document.getElementById("nav").style.left = "-200%";
+  document.getElementById("nav").style.left = "-100%";
 });
