@@ -27,7 +27,7 @@ h2,
 h3,
 h4,
 h5 {
-  // margin: 3rem 0 1.38rem;
+  margin: 3rem 0 1.38rem;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   line-height: 1.3;
@@ -76,6 +76,7 @@ small,
   --menu-animation-time: 2s;
   --nav-open-close-time: 0.5s;
   --li-animate-time: 0.3s;
+  --expand-compress-time: 0.2s;
 }
 
 .nav {
@@ -84,15 +85,14 @@ small,
   width: 40%;
   height: 100vh;
   background: var(--nav-bar-background);
-
   z-index: 1000;
   transition: all var(--nav-open-close-time) ease-in-out;
+
   .menu-holder {
     position: absolute;
     top: 0;
     height: 100%;
     width: 100%;
-    box-shadow: 0 0.5em 3em #000;
 
     .menu {
       margin-left: 1rem;
@@ -133,7 +133,8 @@ small,
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    left: -100%;
+    left: -200%;
+    box-shadow: 0 0 0 #000;
   }
 }
 
@@ -190,33 +191,94 @@ small,
     width: 50%;
 
     h2 {
-      font-size: 2rem;
+      font-size: 3vw;
       font-family: "Cedarville Cursive", cursive;
       text-transform: capitalize;
       color: var(--primary-color-500);
       margin-bottom: 1rem;
       text-align: center;
+      animation: h2Entrance 4s ease-in-out;
+
+      @keyframes h2Entrance {
+        0% {
+          transform: translateX(65vw);
+          opacity: 0;
+        }
+        50% {
+          transform: translateX(-35vw);
+          opacity: 0.5;
+        }
+        75% {
+          transform: translateX(25vw);
+          opacity: 0.75;
+        }
+        100% {
+          transform: translateX(0vw);
+          opacity: 1;
+        }
+      }
     }
     h1 {
-      font-size: 4rem;
+      font-size: 5vw;
       font-weight: bolder;
       text-transform: uppercase;
       letter-spacing: 0.1rem;
       margin-bottom: 1rem;
       text-align: center;
+      animation: h1Entrance 4s ease-in-out;
+      @keyframes h1Entrance {
+        0% {
+          transform: translateX(-65vw);
+          opacity: 0;
+        }
+        50% {
+          transform: translateX(35vw);
+          opacity: 0.5;
+        }
+        75% {
+          transform: translateX(-25vw);
+          opacity: 0.75;
+        }
+        100% {
+          transform: translateX(0vw);
+          opacity: 1;
+        }
+      }
     }
     .btn {
-      font-size: 1.5rem;
-      width: 16rem;
+      font-size: 1.5vw;
+      width: 16vw;
       text-transform: uppercase;
       font-weight: lighter;
-      letter-spacing: 0.3rem;
+      letter-spacing: 0.3vw;
       color: white;
-      padding: 0.5rem 2rem;
+      padding: 0.5vw 2vw;
       background: var(--primary-color-900);
       margin: 0 auto;
-      outline: 0.125rem solid var(--primary-color-900);
-      outline-offset: 0.25rem;
+      outline: 0.125vw solid var(--primary-color-900);
+      outline-offset: 0.25vw;
+      transition: all 0.5s;
+      animation: btnScale 4s linear;
+      &:hover {
+        cursor: pointer;
+        background: var(--primary-color-500);
+        color: grey;
+      }
+
+      @keyframes btnScale {
+        0% {
+          transform: scale(2, 2);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(3, 3);
+          opacity: 0.5;
+        }
+        100% {
+          transform: scale(1, 1);
+          opacity: 1;
+        }
+      }
     }
   }
 }
@@ -232,6 +294,54 @@ small,
   );
 }
 
-.check {
-  height: 100vh;
+.skills-holder {
+  // height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background: #f1f5f8;
+
+  .skill {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 25rem;
+    margin: 0;
+    text-align: center;
+    // border: 0.0000001px solid red;
+    transition: all var(--expand-compress-time) linear;
+
+    &:hover {
+      cursor: pointer;
+      border-bottom: 5px var(--primary-color-800) solid;
+      transform: translateY(-5px);
+      background: white;
+    }
+
+    .skill-icon {
+      font-size: 4rem;
+      margin-top: 5rem;
+      color: var(--primary-color-700);
+    }
+
+    .skill-title {
+      font-size: 1.5rem;
+      letter-spacing: 0.5rem;
+      text-transform: capitalize;
+    }
+
+    p {
+      width: 70%;
+      // border: 1px solid red;
+      margin: 0 auto;
+      color: var(--primary-color-800);
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 49.7vw;
+    }
+    @media screen and (min-width: 1024px) {
+      width: 24vw;
+    }
+  }
 }
