@@ -314,7 +314,9 @@ small,
     &:hover {
       cursor: pointer;
       border-bottom: 5px var(--primary-color-800) solid;
-      transform: translateY(-5px);
+      .skill-icon {
+        transform: translateY(-5px);
+      }
       background: white;
     }
 
@@ -322,6 +324,7 @@ small,
       font-size: 4rem;
       margin-top: 5rem;
       color: var(--primary-color-700);
+      transition: all var(--expand-compress-time) linear;
     }
 
     .skill-title {
@@ -342,6 +345,69 @@ small,
     }
     @media screen and (min-width: 1024px) {
       width: 24vw;
+    }
+  }
+}
+
+.about-holder {
+  background: white;
+
+  .about-holder-1 {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid red;
+    height: 500px;
+
+    .about-image {
+      width: 90%;
+      height: 300px;
+      margin: 5rem auto;
+      border: 10px solid var(--primary-color-800);
+    }
+  }
+
+  .about-holder-2 {
+    display: inline-block;
+    width: 100%;
+    height: 500px;
+    border: 1px solid red;
+
+    .tea-station-content {
+      // border: 1px solid red;
+      // display: flex;
+      // align-items: center;
+
+      h2 {
+        font-size: 2rem;
+        font-family: "Cedarville Cursive", cursive;
+        margin: 1rem 2rem;
+        color: var(--primary-color-800);
+        text-transform: capitalize;
+      }
+      h1 {
+        font-size: 3rem;
+        margin: 1rem 2rem;
+        font-weight: lighter;
+        text-transform: capitalize;
+      }
+      p {
+        margin: 1rem 2rem;
+      }
+      .about-btn {
+        margin: 1rem 2rem;
+        text-transform: uppercase;
+        padding: 0.5rem 2.5rem;
+        background: var(--primary-color-700);
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .about-holder-1 {
+      width: 49%;
+    }
+    .about-holder-2 {
+      width: 49%;
     }
   }
 }
