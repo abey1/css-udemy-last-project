@@ -1,0 +1,21 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+}
+.grid-container .grid-itemm {
+  text-align: center;
+  padding: 3rem 0;
+  font-size: 4rem;
+}
+@media screen and (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 50% 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
