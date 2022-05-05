@@ -417,6 +417,9 @@ small,
 }
 
 .our-products {
+  background: #f1f5f8;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   display: grid;
   max-width: 2000px;
   grid-template-columns: auto;
@@ -464,6 +467,9 @@ small,
 .our-products .our-products-2 {
   display: grid;
   grid-template-columns: auto;
+  background: #f1f5f8;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .our-products .our-products-2 .product-pic {
   margin: 0 auto;
@@ -538,6 +544,229 @@ small,
 @media screen and (min-width: 1200px) {
   .our-products {
     grid-template-columns: 25% 75%;
+  }
+}
+
+.services {
+  padding-left: 2rem;
+  padding-right: 2em;
+  text-align: center;
+}
+.services h2 {
+  font-family: "Cedarville Cursive", cursive;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+.services h1 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+.services .services-card-holder {
+  display: grid;
+  grid-template-columns: auto;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.services .services-card-holder .service-card-1 {
+  width: 90%;
+  border-radius: 10px;
+  background: #f1f5f8;
+  transition: all 0.2s linear;
+  margin-bottom: 1rem;
+}
+.services .services-card-holder .service-card-1 .service-image {
+  border-radius: 10px 10px 0 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 300px;
+  background: url(./images/product-1.jpeg) center/cover no-repeat;
+}
+.services .services-card-holder .service-card-1 .service-lower-half {
+  width: 90%;
+  margin: 0 auto;
+}
+.services .services-card-holder .service-card-1 .service-lower-half .service-icon-holder {
+  border: 10px solid #f1f5f8;
+  border-radius: 50%;
+  background: var(--primary-color-100);
+  margin-top: -2rem;
+  width: 120px;
+  height: 120px;
+  margin: -60px auto 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.services .services-card-holder .service-card-1 .service-lower-half .service-icon-holder .service-icon {
+  font-size: 4rem;
+  color: var(--primary-color-900);
+  transition: all var(--expand-compress-time) linear;
+}
+.services .services-card-holder .service-card-1 .service-lower-half h4 {
+  margin: 0px auto 10px auto;
+}
+.services .services-card-holder .service-card-1 .service-lower-half p {
+  color: var(--primary-color-900);
+}
+.services .services-card-holder .service-card-1 .service-lower-half .services-btn {
+  display: inline-block;
+  text-align: center;
+  color: white;
+  margin: 0rem 5rem;
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+  background: var(--primary-color-700);
+  margin: 0px auto 20px auto;
+  box-shadow: 0 0.1rem 0.5rem black;
+  transition: all 0.3s linear;
+}
+.services .services-card-holder .service-card-1 .service-lower-half .services-btn:hover {
+  cursor: pointer;
+  background: var(--primary-color-100);
+  color: grey;
+  box-shadow: 0 0.2rem 0.7rem black;
+}
+.services .services-card-holder .service-card-1:hover {
+  transform: scale(1.01, 1.01);
+  box-shadow: 0.1rem 0.1rem 1rem black;
+}
+.services .services-card-holder .service-card-2 {
+  width: 90%;
+  border-radius: 10px;
+  background: #f1f5f8;
+  transition: all 0.2s linear;
+  margin-bottom: 1rem;
+}
+.services .services-card-holder .service-card-2 .service-image {
+  border-radius: 10px 10px 0 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 300px;
+  background: url(./images/product-1.jpeg) center/cover no-repeat;
+}
+.services .services-card-holder .service-card-2 .service-lower-half {
+  width: 90%;
+  margin: 0 auto;
+}
+.services .services-card-holder .service-card-2 .service-lower-half .service-icon-holder {
+  border: 10px solid #f1f5f8;
+  border-radius: 50%;
+  background: var(--primary-color-100);
+  margin-top: -2rem;
+  width: 120px;
+  height: 120px;
+  margin: -60px auto 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.services .services-card-holder .service-card-2 .service-lower-half .service-icon-holder .service-icon {
+  font-size: 4rem;
+  color: var(--primary-color-900);
+  transition: all var(--expand-compress-time) linear;
+}
+.services .services-card-holder .service-card-2 .service-lower-half h4 {
+  margin: 0px auto 10px auto;
+}
+.services .services-card-holder .service-card-2 .service-lower-half p {
+  color: var(--primary-color-900);
+}
+.services .services-card-holder .service-card-2 .service-lower-half .services-btn {
+  display: inline-block;
+  text-align: center;
+  color: white;
+  margin: 0rem 5rem;
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+  background: var(--primary-color-700);
+  margin: 0px auto 20px auto;
+  box-shadow: 0 0.1rem 0.5rem black;
+  transition: all 0.3s linear;
+}
+.services .services-card-holder .service-card-2 .service-lower-half .services-btn:hover {
+  cursor: pointer;
+  background: var(--primary-color-100);
+  color: grey;
+  box-shadow: 0 0.2rem 0.7rem black;
+}
+.services .services-card-holder .service-card-2:hover {
+  transform: scale(1.01, 1.01);
+  box-shadow: 0.1rem 0.1rem 1rem black;
+}
+.services .services-card-holder .service-card-3 {
+  width: 90%;
+  border-radius: 10px;
+  background: #f1f5f8;
+  transition: all 0.2s linear;
+  margin-bottom: 1rem;
+}
+.services .services-card-holder .service-card-3 .service-image {
+  border-radius: 10px 10px 0 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 300px;
+  background: url(./images/product-1.jpeg) center/cover no-repeat;
+}
+.services .services-card-holder .service-card-3 .service-lower-half {
+  width: 90%;
+  margin: 0 auto;
+}
+.services .services-card-holder .service-card-3 .service-lower-half .service-icon-holder {
+  border: 10px solid #f1f5f8;
+  border-radius: 50%;
+  background: var(--primary-color-100);
+  margin-top: -2rem;
+  width: 120px;
+  height: 120px;
+  margin: -60px auto 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.services .services-card-holder .service-card-3 .service-lower-half .service-icon-holder .service-icon {
+  font-size: 4rem;
+  color: var(--primary-color-900);
+  transition: all var(--expand-compress-time) linear;
+}
+.services .services-card-holder .service-card-3 .service-lower-half h4 {
+  margin: 0px auto 10px auto;
+}
+.services .services-card-holder .service-card-3 .service-lower-half p {
+  color: var(--primary-color-900);
+}
+.services .services-card-holder .service-card-3 .service-lower-half .services-btn {
+  display: inline-block;
+  text-align: center;
+  color: white;
+  margin: 0rem 5rem;
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+  background: var(--primary-color-700);
+  margin: 0px auto 20px auto;
+  box-shadow: 0 0.1rem 0.5rem black;
+  transition: all 0.3s linear;
+}
+.services .services-card-holder .service-card-3 .service-lower-half .services-btn:hover {
+  cursor: pointer;
+  background: var(--primary-color-100);
+  color: grey;
+  box-shadow: 0 0.2rem 0.7rem black;
+}
+.services .services-card-holder .service-card-3:hover {
+  transform: scale(1.01, 1.01);
+  box-shadow: 0.1rem 0.1rem 1rem black;
+}
+@media screen and (min-width: 768px) {
+  .services .services-card-holder {
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .services .services-card-holder {
+    grid-template-columns: auto auto auto;
   }
 }
 
